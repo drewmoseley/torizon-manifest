@@ -12,6 +12,7 @@ Each vendor lives in its own folder under `torizon/`:
 | Folder            | Vendor / platform                          |
 |--------------------|--------------------------------------------|
 | `torizon/tdx/`     | Toradex SoMs (via `meta-toradex-bsp`/`meta-toradex-distro`, silicon-agnostic) |
+| `torizon/mtk/`     | MediaTek `meta-adlink-mtk` |
 | `torizon/nxp/`     | NXP i.MX community BSP (`meta-imx`, non-Toradex boards) |
 | `torizon/nvidia/`  | NVIDIA Jetson (Tegra), `meta-tegra`        |
 | `torizon/syn/`     | Synaptics Astra                            |

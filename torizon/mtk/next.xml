@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote alias="repo" fetch="https://gitlab.com/mediatek/aiot/rity" name="mediatek"/>
+  <remote alias="repo" fetch="https://github.com/ADLINK" name="adlink"/>
+  <remote alias="repo" fetch="https://github.com/kraj" name="kraj"/>
+  <remote alias="repo" fetch="https://github.com/openembedded" name="oe"/>
+  <remote alias="repo" fetch="https://git.yoctoproject.org" name="yp"/>
+  <remote alias="repo" fetch="https://github.com/uptane" name="uptane"/>
+  <remote alias="repo" fetch="https://github.com/torizon" name="torizon"/>
+
+  <default sync-j="4" sync-s="true"/>
+
+  <project name="openembedded-core" path="layers/openembedded-core" remote="oe"/>
+  <project name="bitbake" path="layers/openembedded-core/bitbake" remote="oe" revision="master"/>
+  <project name="meta-yocto" path="layers/meta-yocto" remote="yp"/>
+  <project name="meta-arm" path="layers/meta-arm" remote="yp"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" remote="oe"/>
+  <project name="meta-clang" path="layers/meta-clang" remote="kraj"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" remote="yp"/>
+
+  <project name="meta-mediatek-bsp" path="layers/meta-mediatek-bsp" remote="mediatek" revision="rity-scarthgap-v25.0"/>
+  <project name="meta-adlink-mtk" path="layers/meta-adlink-mtk" remote="adlink" revision="rity-scarthgap-v25.0"/>
+
+  <project name="meta-updater" path="layers/meta-updater" remote="uptane" revision="master"/>
+  <project name="meta-torizon" path="layers/meta-torizon" remote="torizon" revision="master"/>
+  <project name="meta-torizon-bsp" path="layers/meta-torizon-bsp" remote="torizon" revision="master">
+    <linkfile dest="setup-environment" src="scripts/setup-environment"/>
+  </project>
+</manifest>
